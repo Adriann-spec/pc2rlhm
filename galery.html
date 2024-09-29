@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Movie Gallery</div>
+      <h1>Movie Gallery</h1>
+    </header>
+
+    <!-- Botón de categorías centrado -->
+    <div class="filter-container">
+      <select id="categoryFilter">
+        <option value="all">All Genres</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+      </select>
+    </div>
+
+    <div class="grid-container" id="movieGrid">
+      <!-- Action Movies -->
+      <div class="movie-card" data-genre="action">
+        <img
+          class="movie-img"
+          src="imagenes/jonwick.png"
+          alt="John Wick"
+        />
+        <h3>John Wick</h3>
+        <p>El mejor asesino a sueldo.</p>
+        <button class="favorite-btn">Favorito</button>
+      </div>
+      <div class="movie-card" data-genre="action">
+        <img
+          class="movie-img"
+          src="imagenes/laracroft.jpg"
+          alt="Tomb Raider"
+        />
+        <h3>Tomb Raider</h3>
+        <p>Una aventurera y arqueóloga muy conocida.</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+
+      <!-- Comedy Movies -->
+      <div class="movie-card" data-genre="comedy">
+        <img
+          class="movie-img"
+          src="imagenes/donderubias.jpg"
+          alt="¿Dónde están las rubias?"
+        />
+        <h3>¿Dónde están las rubias?</h3>
+        <p>Unos agentes encubiertos muy peculiares.</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="comedy">
+        <img
+          class="movie-img"
+          src="imagenes/soncomoninos.webp"
+          alt="Son como niños 2"
+        />
+        <h3>Son como niños 2</h3>
+        <p>Un grupo de amigos muy extravagantes.</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+
+      <!-- Drama Movies -->
+      <div class="movie-card" data-genre="drama">
+        <img class="movie-img" src="imagenes/corazvaliente.jpg" alt="Corazón Valiente" />
+        <h3>corazón valiente</h3>
+        <p>Una aventura muy peligrosa.</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+      <div class="movie-card" data-genre="drama">
+        <img class="movie-img" src="imagenes/naomi.jpg" alt="Desesperada" />
+        <h3>Desesérada</h3>
+        <p>Una historia contundente sobre la realidad.</p>
+        <button class="favorite-btn">Favorite</button>
+      </div>
+
+    
+    <!-- Modal -->
+    <div id="movieModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img
+          id="modalMovieImage"
+          class="modal-movie-img"
+          alt="Movie Image"
+        />
+        <h2 id="movieTitle"></h2>
+        <p id="movieDescription"></p>
+      </div>
+    </div>
+
+    <script src="categoryfilter.js"></script>
+    <script src="modal.js"></script>
+    <script src="favorite.js"></script>
+  </body>
+</html>
